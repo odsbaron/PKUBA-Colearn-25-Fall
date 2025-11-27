@@ -67,7 +67,97 @@ https://sepolia.etherscan.io/address/0x4a6C0c0dc8bD8276b65956c9978ef941C3550A1B#
 
 根据查看合约代码，可以知道hint函数所给的暗示是"keccak PKUBlockchain"，后续还是尽量按照题目要求逐步完成。
 
+1. 首先调用目标合约中hint函数，看题目给了什么暗示
+```shell
+root@racknerd-9da1d08:~/home/PKUBA-1/PKUBA-Colearn-25-Fall/writeup/part2# cast call $TARGET_CONTRACT "hint()(string)" --rpc-url $SEPOLIA_RPC_URL
+"keccak PKUBlockchain"
+```
+2. 因此我们需要使用keccak单向加密函数对PKUBlockchain字符串进行加密，加密的结果可能就是答案。
+3. 解答项目结构
+/src/Solver.sol  
+```solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
 
+interface ITargetContract {
+    function hint() external pure returns (string memory);
+    function query(bytes32 _hash) external returns (string memory);
+}
+
+contract Solver {
+    ITargetContract public target;
+    
+    constructor(address _targetAddress) {
+        target = ITargetContract(_targetAddress);
+    }
+    
+    // 获取提示
+    function getHint() external view returns (string memory) {
+        // 调用目标合约中的hint函数
+        return target.hint();
+    }
+    
+    // 解答
+    function getCorrectHash() public pure returns (bytes32) {
+        return keccak256(abi.encodePacked("PKUBlockchain"));
+    }
+    
+    // 提交答案
+    function solve() external returns (string memory) {
+        bytes32 answer = getCorrectHash();
+        return target.query(answer);
+    }
+}
+```
+
+script/Deploy.s.sol  
+```Solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Script.sol";
+import "../src/Solver.sol";
+
+contract DeployScript is Script {
+    function run() external {
+        address targetContract = vm.envAddress("TARGET_CONTRACT");
+        
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        
+        vm.startBroadcast(deployerPrivateKey);
+        
+        // 部署 Solver 合约
+        Solver solver = new Solver(targetContract);
+        
+        console.log("Solver deployed at:", address(solver));
+        console.log("Target contract:", targetContract);
+        
+        // 自动调用 solve 方法
+        string memory flag = solver.solve();
+        console.log("flag result", flag);
+        
+        vm.stopBroadcast();
+    }
+}
+```
+run
+```shell
+forge script script/Deploy.s.sol:DeployAndSolve \
+    --rpc-url $SEPOLIA_RPC_URL \
+    --broadcast \
+    -vvvv
+
+Script ran successfully.
+
+== Logs ==
+  Solver deployed at: 0x6F00A229cf51DB7Eec4B6996F2eBcFE365C0Ae98
+  Target contract: 0x4a6C0c0dc8bD8276b65956c9978ef941C3550A1B
+  flag result FLAG{PKU_Blockchain_Colearn_Week1_Success}
+```
+3. 看到上方合约执行的结果可以知道，我们成功的完成了题目的要求。
+0x6F00A229cf51DB7Eec4B6996F2eBcFE365C0Ae98 这个是我部署合约的地址，
+按要求通过合约调用  
+https://sepolia.etherscan.io/tx/0x91e72d0a469e800d7f44f2a02b40518128a5a59eea8124e85496997113082604
 
 ### 2025.07.11
 
