@@ -30,4 +30,8 @@ Feng_999
 ### 2025.11.30周日
 跟随文档和视频，学习并上手操作Week1 Part I作业，理解了测试网、智能合约、浏览器。
 
+### 2025.12.01周一
+跟随文档，完成了Week1 Part II作业，学会使用Solidity编写智能合约并用REMIX IDE进行部署。
+通过hint发现需要对“PKUBlockchain”加密作为query输入，完成后通过getSolvers可以检验发现之前部署的合约被加入到地址名单内了。
+
 <!-- Content_END -->
