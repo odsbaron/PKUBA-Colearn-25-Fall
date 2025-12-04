@@ -14,7 +14,8 @@ timezone: UTC+8
     DeFi 合约组 > 链上数据组 > 合约安全组
 4. 你的联系方式（Wechat or Telegram）
     Wechat: ShutUUpe
-
+5. 质押的交易哈希
+    0xfe44b16851f8cffcd705ed4d6f86239a3a3cff92d6579bb8726bc90d9c4d31c0
 ## Notes
 
 <!-- Content_START -->
