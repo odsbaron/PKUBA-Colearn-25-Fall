@@ -101,9 +101,6 @@
 | Name | W1 (11.17) | W2 (11.24) | W3 (12.01) | W4 (12.08) | W5 (12.15) | W6 (12.22) | W7 (12.29) | W8 (01.05) |
 | ------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | [DeFi/CauchyK9](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/CauchyK9.md) | ✅ | ⭕️ |   | | | | | |
-| [Afterglow36](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Afterglow36.md) |  ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ |
-| [miyosep](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/miyosep.md) |  ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ |
-| [Week1](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Week1.md) | ⭕️ | ⭕️ |   | | | | | |
 | [DeFi/miyosep](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/miyosep.md) | ⭕️ | ✅ |   | | | | | |
 | [Onchain-data/Afterglow36](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/Afterglow36.md) | ✅ | ✅ |   | | | | | |
 | [Onchain-data/ai0415](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/ai0415.md) | ⭕️ | ⭕️ |   | | | | | |
@@ -124,11 +121,10 @@
 | [Onchain-data/WaterBearBobit](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/WaterBearBobit.md) | ⭕️ | ⭕️ |   | | | | | |
 | [DeFi/lionelll](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/lionelll.md) | ⭕️ | ⭕️ |   | | | | | |
 | [Onchain-data/aliced-crypto](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/aliced-crypto.md) | ✅ | ✅ |   | | | | | |
-| [Week3](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Week3.md) | ⭕️ | ⭕️ |   | | | | | |
 | [Onchain-data/rayHartley](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/rayHartley.md) | ⭕️ | ⭕️ |   | | | | | |
-| [DeFi/Andy](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/Andy.md) |  ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ⭕️ |
 | [DeFi/pandmonkey](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/pandmonkey.md) | ⭕️ | ⭕️ | ✅ | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
