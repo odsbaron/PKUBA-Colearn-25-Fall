@@ -210,4 +210,54 @@ Geth 提供了一套Go客户端库，方便Go代码和以太坊交互，常用�
     }
 ```
 
+Part II - Go 语言环境准备
+
+在 racknerd ubuntu 22.04 服务器下进行安装
+```bash
+root@racknerd-9da1d08:~/home/PKUBA-1/PKUBA-Colearn-25-Fall# cd ~
+root@racknerd-9da1d08:~# ls
+home  send-ping-transaction.ts  snap  tsconfig.json  virt-sysprep-firstboot.log
+root@racknerd-9da1d08:~# cd ../
+root@racknerd-9da1d08:/# ls
+bin  boot  core  dev  etc  home  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+root@racknerd-9da1d08:/# cd /tmp
+root@racknerd-9da1d08:/tmp# wget https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
+--2025-12-07 08:01:30--  https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
+Resolving go.dev (go.dev)... 216.239.36.21, 216.239.32.21, 216.239.38.21, ...
+Connecting to go.dev (go.dev)|216.239.36.21|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz [following]
+--2025-12-07 08:01:30--  https://dl.google.com/go/go1.23.4.linux-amd64.tar.gz
+Resolving dl.google.com (dl.google.com)... 172.217.12.142, 2607:f8b0:4007:801::200e
+Connecting to dl.google.com (dl.google.com)|172.217.12.142|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 73645095 (70M) [application/x-gzip]
+Saving to: ‘go1.23.4.linux-amd64.tar.gz’
+
+go1.23.4.linux-amd64.tar.gz             100%[=============================================================================>]  70.23M  76.2MB/s    in 0.9s    
+
+2025-12-07 08:01:31 (76.2 MB/s) - ‘go1.23.4.linux-amd64.tar.gz’ saved [73645095/73645095]
+
+root@racknerd-9da1d08:/tmp# sudo tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz
+root@racknerd-9da1d08:/tmp# nano ~/.bashrc
+root@racknerd-9da1d08:/tmp# source ~/.bashrc
+root@racknerd-9da1d08:/tmp# go version
+go version go1.23.4 linux/amd64
+
+# 配置gopath
+root@racknerd-9da1d08:/tmp# echo 'export GOPATH=$HOME/go' >> ~/.bashrc
+echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
+source ~/.bashrc
+root@racknerd-9da1d08:/tmp# go env GOPATH
+/root/go
+```
+
+ 工作流
+```bash
+cd /home/workplace/my-project
+go mod init my-project
+go run main.go
+
+```
+
 <!-- Content_END -->
