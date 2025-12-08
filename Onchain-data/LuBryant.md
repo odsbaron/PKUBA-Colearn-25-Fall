@@ -39,6 +39,80 @@ timezone: UTC+8
 5. 在文件名处输入路径（例如 new_folder/filename.py）并粘贴内容。
 6. 提交更改（Commit changes）。
 
+#### Github 使用小知识
+如何知道自己有使用权限？
+方法一：最直观的 UI 验证（看“Settings”标签）
+这是最简单的方法，不需要写代码。
+
+1. 在浏览器中打开 你朋友的那个仓库页面（注意：不是你 Fork 出来的那个，是原本的那个 URL）。
+2. 看页面顶部的导航栏（Code, Issues, Pull requests 那一行）。
+3. 关键点： 如果你能看到 Settings（设置） 这一项，说明你已经是协作者了，拥有写权限。普通路人是看不到别人仓库的 Settings 选项的。
+
+方法三：硬核命令行验证（Dry Run）
+如果你已经把代码 clone 到本地了，可以用 Git 命令来测试。
+
+注意： 因为你之前是 Fork 的，所以你本地默认的 origin 应该是指向 你自己的仓库。你需要先确认你有没有把你朋友的仓库添加为远程仓库（通常命名为 upstream）。
+
+请在终端执行以下步骤：
+
+添加朋友的仓库作为远程地址（如果你还没加的话）：
+
+```Bash
+# 假设你朋友的仓库地址是 https://github.com/friend/project.git
+git remote add upstream https://github.com/friend/project.git
+测试推送权限（伪推送）： 使用 --dry-run 参数，这会模拟推送过程但不会真的把代码传上去，专门用来测试连接和权限。
+```
+```Bash
+git push upstream main --dry-run
+```
+如果成功： 会显示 Everything up-to-date 或者模拟写入的信息。说明你有权限！
+
+如果失败： 会显示 403 Forbidden 或者 Permission denied。
+
+---
+Fork 了项目只是自己有了一份，并不会修改原有仓库。
+
+既然你已经在自己的 Fork 里提交了代码，现在要把这个改动“发送”给你的朋友。因为你是在网页端操作，最简单的方法就是 提 Pull Request (PR)。
+
+虽然你有写权限，但**跨仓库（从你的 Fork 到他的 Upstream）**传输代码，在网页上只能通过 PR。
+
+操作步骤：
+
+1. 打开 你自己 的那个仓库页面（你能看到 Commit 的那个页面）。
+2. 点击页面上方的 Pull requests 标签。
+3. 点击绿色的 New pull request 按钮。
+4. 关键检查：
+    - 左边（Base repository）：应该是 你朋友的仓库 (main 分支)。
+    - 右边（Head repository）：应该是 你的仓库 (main 分支)。
+5. 你会看到两个仓库的差异（也就是你刚才修改的内容）。
+6. 点击 Create pull request。
+
+重点来了： 因为你有 写权限，当你创建完 PR 后，你会发现 Merge 按钮是绿色的（或者你可以直接去他的仓库里点 Merge）。你自己就可以批准并合并这个 PR，不需要等他操作。合并后，他的仓库就有了你的更新。
+
+下次如何直接利用“权限”修改？（不走弯路）
+如果你想利用他对你开放的权限，跳过 Fork 和 PR 的步骤，直接修改他的项目，你需要改变操作习惯：
+
+场景 A：如果你坚持在网页上改
+不要去你自己的仓库！
+
+1. 直接在浏览器打开 你朋友的仓库 URL。
+2. 找到那个文件。
+3. 点击右上角的笔形图标（Edit）。
+4. 修改完直接 Commit。
+    - 注意：如果你的权限没问题，它会允许你直接 Commit to main branch。如果只能 Create a new branch，说明主分支被保护了，还是得走 PR。
+
+场景 B：如果你在本地电脑（推荐，更有高手风范）
+你需要告诉你的本地 Git，要把代码推送到哪里。
+
+1. 在本地终端，把 你朋友的仓库 添加为一个新的远程地址（通常叫 upstream）
+```Bash
+git remote add upstream https://github.com/朋友ID/项目名.git
+```
+下次修改完代码，直接推送到他的仓库：
+
+```Bash
+git push upstream main
+```
 
 #### 动手部署一个智能合约
 PKUBlockchain 25 Fall Get Ready Quest: https://github.com/aliceyzhsu/crypto-techguy/blob/main/quests/get-ready.md
