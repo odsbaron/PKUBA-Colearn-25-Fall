@@ -127,7 +127,12 @@
 | [DeFi/1248368338-droid](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/DeFi/1248368338-droid.md) | ⭕️ | ⭕️ | ⭕️ | ⭕️ |   | | | |
 | [Onchain-data/0xinsternet](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/0xinsternet.md) | ⭕️ | ⭕️ | ✅ | ✅ |   | | | |
 | [Onchain-data/LuBryant/LuBryant](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/LuBryant/LuBryant.md) | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | | | |
+| [Onchain-data/LuBryant/week4/Part1-Geth/1-geth](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/LuBryant/week4/Part1-Geth/1-geth.md) | ⭕️ | ⭕️ | ⭕️ | ⭕️ |   | | | |
+| [Onchain-data/LuBryant/week4/Part1-Geth/3-the-graph-graphql](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/LuBryant/week4/Part1-Geth/3-the-graph-graphql.md) | ⭕️ | ⭕️ | ⭕️ | ⭕️ |   | | | |
+| [Onchain-data/LuBryant/week4/Part1-Geth/2-live-monitoring](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/LuBryant/week4/Part1-Geth/2-live-monitoring.md) | ⭕️ | ⭕️ | ⭕️ | ⭕️ |   | | | |
+| [Onchain-data/LuBryant/week4/Part2-Etherscan/Etherscan](https://github.com/qingoba/PKUBA-Colearn-25-Fall/blob/main/Onchain-data/LuBryant/week4/Part2-Etherscan/Etherscan.md) | ⭕️ | ⭕️ | ⭕️ | ⭕️ |   | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
