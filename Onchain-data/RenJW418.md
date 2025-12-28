@@ -124,4 +124,8 @@ contractAddress:部署合约生成的新地址
 
 ### 2025.12.28
 1.创建telegram robot
+2.将live monitor整合到消息发送中
+![image](https://github.com/user-attachments/assets/456de2a0-3f87-46c9-9d1d-529bc9dbfb83)
+
+
 <!-- Content_END -->
