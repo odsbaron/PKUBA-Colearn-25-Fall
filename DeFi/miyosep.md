@@ -68,6 +68,24 @@ RPC 服务商限制请求速率（RPS），请求过快会触发 HTTP 429。
 通过 FilterQuery 指定合约地址和事件签名（Topic0），节点可利用Bloom Filter快速筛选相关区块。
 减少无关日志扫描，高效获取特定事件（如 Swap、Transfer）。
 
+### 2025.12.31
+Week 7
+
+- Pair 持币、定价、结算
+- Router 只是批量调用器
+- 定价规则是 x · y = k
+
+swap：
+-用户算 output
+-Pair 只验证恒定乘积
+
+_update：
+-更新 reserve
+-累计价格用于 TWAP
+
+套利
+-flash swap 是核心工具
+
 
 
 
